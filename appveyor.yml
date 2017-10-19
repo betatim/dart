@@ -84,10 +84,10 @@ cache:
   - C:\projects\vcpkg\installed -> appveyor.yml
   - C:\projects\vcpkg\packages -> appveyor.yml
 
-build: off
-  #project: C:\projects\dart\build\dart.sln # path to Visual Studio solution or project
-  #parallel: true                           # enable MSBuild parallel builds
-  #verbosity: quiet                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
+build:
+  project: C:\projects\dart\build\dart.sln # path to Visual Studio solution or project
+  parallel: true                           # enable MSBuild parallel builds
+  verbosity: minimal                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
 
 #test_script:
   #- cmd: ctest --build-config %configuration% --parallel 4 --output-on-failure

@@ -78,8 +78,8 @@ install:
   
 # preserve contents of selected directories and files across project builds
 cache:
-  - C:\projects\vcpkg\installed -> appveyor.yml
-  - C:\projects\vcpkg\packages -> appveyor.yml
+  - C:\projects\vcpkg\installed -> .appveyor.yml
+  - C:\projects\vcpkg\packages -> .appveyor.yml
 
 build:
   project: C:\projects\dart\build\dart.sln # path to Visual Studio solution or project

@@ -4,9 +4,6 @@ version: "{build}"
 image: Visual Studio 2017
 
 # specify custom environment variables
-#
-# We generate project files for Visual Studio 14 because the boost binaries installed on the test server are for Visual Studio 14.
-# Check updates at here: https://www.appveyor.com/docs/build-environment/#boost
 environment:
   # We cannot use LLVM toolset for now because the boost installed on the server is built not for LLVM.
   MSVC_DEFAULT_OPTIONS: ON
@@ -87,7 +84,7 @@ cache:
 build:
   project: C:\projects\dart\build\dart.sln # path to Visual Studio solution or project
   parallel: true                           # enable MSBuild parallel builds
-  verbosity: minimal                         # MSBuild verbosity level (quiet|minimal|normal|detailed)
+  verbosity: minimal                       # MSBuild verbosity level (quiet|minimal|normal|detailed)
 
 #test_script:
   #- cmd: ctest --build-config %configuration% --parallel 4 --output-on-failure

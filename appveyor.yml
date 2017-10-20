@@ -43,22 +43,14 @@ branches:
 install:
   - if "%platform%"=="Win32" set VCPKG_ARCH=x86-windows
   - if "%platform%"=="x64"   set VCPKG_ARCH=x64-windows
-  
-  # clone vcpkg
-  - cd C:\projects
-  - git clone https://github.com/Microsoft/vcpkg
-  - cd vcpkg
-  
-  # build vcpkg
-  - powershell -exec bypass scripts\bootstrap.ps1
-  
+
   # install pacakges
-  # ---- required dependencies: eigen3, libccd, fcl, assimp, boost
+  # ---- required dependencies: boost, eigen3, libccd, fcl, assimp
+  - vcpkg install boost:%VCPKG_ARCH%
   - vcpkg install eigen3:%VCPKG_ARCH%
   - vcpkg install ccd:%VCPKG_ARCH%
   - vcpkg install fcl:%VCPKG_ARCH%
   - vcpkg install assimp:%VCPKG_ARCH%
-  - vcpkg install boost:%VCPKG_ARCH%
   # ---- optional dependencies: nlopt, ipopt, bullet3, ode, flann, tinyxml2, urdfdom_headers, urdfdom, opengl, freeglut, osg
   #- vcpkg install nlopt:%VCPKG_ARCH%
   #- vcpkg install ipopt:%VCPKG_ARCH%

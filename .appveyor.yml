@@ -17,12 +17,12 @@ environment:
 #      platform: Win32
       
     - image: Visual Studio 2015
-      GENERATOR: Visual Studio 15 2015
+      GENERATOR: Visual Studio 14 2015
       LLVM_TOOLCHAIN: LLVM-vs2014
       platform: Win32
 
     - image: Visual Studio 2015
-      GENERATOR: Visual Studio 15 2015 Win64
+      GENERATOR: Visual Studio 14 2015 Win64
       LLVM_TOOLCHAIN: LLVM-vs2014
       platform: x64
 

@@ -10,10 +10,15 @@ environment:
       platform: x64
       CMAKE_GENERATOR: -G"Visual Studio 14 2017 Win64"
       CMAKE_TOOLCHAIN: -T"LLVM-vs2014"
-      
+
+    - image: Visual Studio 2017
+      platform: Win32
+      CMAKE_GENERATOR: -G"Visual Studio 14 2017"
+      CMAKE_TOOLCHAIN: -T"LLVM-vs2014"
+
 # build configuration, i.e. Debug, Release, etc.
 configuration:
-#  - Debug
+  - Debug
   - Release
 
 # scripts that are called at very beginning, before repo cloning

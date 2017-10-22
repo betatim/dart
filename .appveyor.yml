@@ -1,17 +1,29 @@
 # Specify version format
 version: "{build}"
 
-image: Visual Studio 2017
-
 # specify custom environment variables
 environment:
   # We cannot use LLVM toolset for now because the boost installed on the server is built not for LLVM.
   MSVC_DEFAULT_OPTIONS: ON
   matrix:
-    - GENERATOR: Visual Studio 15 2017
+#    - image: Visual Studio 2017
+#      GENERATOR: Visual Studio 15 2017
+#      LLVM_TOOLCHAIN: LLVM-vs2015
+#      platform: Win32
+      
+#    - image: Visual Studio 2017
+#      GENERATOR: Visual Studio 15 2017
+#      LLVM_TOOLCHAIN: LLVM-vs2015
+#      platform: Win32
+      
+    - image: Visual Studio 2015
+      GENERATOR: Visual Studio 15 2015
+      LLVM_TOOLCHAIN: LLVM-vs2014
       platform: Win32
 
-    - GENERATOR: Visual Studio 15 2017 Win64
+    - image: Visual Studio 2015
+      GENERATOR: Visual Studio 15 2015 Win64
+      LLVM_TOOLCHAIN: LLVM-vs2014
       platform: x64
 
 # build configuration, i.e. Debug, Release, etc.
@@ -74,7 +86,7 @@ install:
   - cmd: cd C:\projects\dart
   - cmd: md build
   - cmd: cd build
-  - cmd: cmake -G "%GENERATOR%" -DCMAKE_BUILD_TYPE=%configuration% -Durdfdom_DIR="%urdfdom_DIR%" -Durdfdom_headers_DIR="%urdfdom_headers_DIR%" -DDART_MSVC_DEFAULT_OPTIONS="%MSVC_DEFAULT_OPTIONS%" "-DCMAKE_TOOLCHAIN_FILE=C:\projects\vcpkg\scripts\buildsystems\vcpkg.cmake" ..
+  - cmd: cmake -G "%GENERATOR%" -DCMAKE_BUILD_TYPE=%configuration% -DDART_MSVC_DEFAULT_OPTIONS="%MSVC_DEFAULT_OPTIONS%" "-DCMAKE_TOOLCHAIN_FILE=C:\projects\vcpkg\scripts\buildsystems\vcpkg.cmake" -T"%LLVM_TOOLCHAIN%" ..
   
 # preserve contents of selected directories and files across project builds
 cache:

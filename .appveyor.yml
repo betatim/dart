@@ -10,6 +10,11 @@ environment:
       platform: x64
       CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
       CMAKE_TOOLCHAIN: -T"v141"
+      
+    - image: Visual Studio 2017
+      platform: x64
+      CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
+      CMAKE_TOOLCHAIN: -T"v140"
 
     - image: Visual Studio 2017
       platform: x64
@@ -20,11 +25,6 @@ environment:
       platform: x64
       CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
       CMAKE_TOOLCHAIN: -T"v140_clang_c2"
-      
-    - image: Visual Studio 2017
-      platform: x64
-      CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
-      CMAKE_TOOLCHAIN: -T"v140_clang_3_7"
 
 # build configuration, i.e. Debug, Release, etc.
 configuration:

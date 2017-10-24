@@ -9,7 +9,7 @@ environment:
     - image: Visual Studio 2017
       platform: x64
       CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
-      CMAKE_TOOLCHAIN: -T"v141"
+      CMAKE_TOOLCHAIN:
       
     - image: Visual Studio 2017
       platform: x64

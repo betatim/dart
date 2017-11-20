@@ -158,8 +158,8 @@ endif()
 if(MSVC)
 
   # Visual Studio enables c++11 support by default
-  if(MSVC_VERSION VERSION_LESS 1900)
-    message(FATAL_ERROR "${PROJECT_NAME} requires VS 2015 or greater.")
+  if(MSVC_VERSION VERSION_LESS 1911)
+    message(FATAL_ERROR "${PROJECT_NAME} requires VS2017 (15.4) or greater.")
   endif()
   if(DART_TREAT_WARNINGS_AS_ERRORS)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /WX")

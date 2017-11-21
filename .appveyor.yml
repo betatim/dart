@@ -6,15 +6,15 @@ environment:
   MSVC_DEFAULT_OPTIONS: ON
   CMAKE_TOOLCHAIN_FILE: -DCMAKE_TOOLCHAIN_FILE="C:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake"
   matrix:  
-    - image: Visual Studio 2017 Preview
-      platform: x64
-      CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
-      CMAKE_TOOLCHAIN:
+    #- image: Visual Studio 2017 Preview
+    #  platform: x64
+    #  CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
+    #  CMAKE_TOOLCHAIN:
       
-    - image: Visual Studio 2017 Preview
-      platform: x64
-      CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
-      CMAKE_TOOLCHAIN: -T"v141"
+    #- image: Visual Studio 2017 Preview
+    #  platform: x64
+    #  CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
+    #  CMAKE_TOOLCHAIN: -T"v141"
       
     - image: Visual Studio 2017 Preview
       platform: x64
@@ -31,15 +31,15 @@ environment:
       CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
       CMAKE_TOOLCHAIN: -T"v140_clang_c2"
       
-    - image: Visual Studio 2017
-      platform: x64
-      CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
-      CMAKE_TOOLCHAIN:
+    #- image: Visual Studio 2017
+    #  platform: x64
+    #  CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
+    #  CMAKE_TOOLCHAIN:
       
-    - image: Visual Studio 2017
-      platform: x64
-      CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
-      CMAKE_TOOLCHAIN: -T"v141"
+    #- image: Visual Studio 2017
+    #  platform: x64
+    #  CMAKE_GENERATOR: -G"Visual Studio 15 2017 Win64"
+    #  CMAKE_TOOLCHAIN: -T"v141"
       
     - image: Visual Studio 2017
       platform: x64

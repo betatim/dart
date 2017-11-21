@@ -44,6 +44,7 @@
 #define DYNLIB_HANDLE void*
 #elif DART_OS_WINDOWS
 #include <windows.h>
+using hInstance = HINSTANCE__*;
 #define DYNLIB_HANDLE hInstance
 #endif
 

@@ -43,6 +43,7 @@
 #elif DART_OS_MACOS
 #define DYNLIB_HANDLE void*
 #elif DART_OS_WINDOWS
+#include <windows.h>
 #define DYNLIB_HANDLE hInstance
 #endif
 
@@ -116,7 +117,7 @@ protected:
   boost::filesystem::path mCanonicalPath;
 
   /// Handle to the loaded library.
-  DYNLIB_HANDLE mInstance;
+  HINSTANCE mInstance;
 
 private:
   /// Returns the last loading error.

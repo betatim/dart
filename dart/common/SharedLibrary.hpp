@@ -117,7 +117,7 @@ protected:
   boost::filesystem::path mCanonicalPath;
 
   /// Handle to the loaded library.
-  HINSTANCE mInstance;
+  DYNLIB_HANDLE mInstance;
 
 private:
   /// Returns the last loading error.

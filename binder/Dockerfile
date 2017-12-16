@@ -47,6 +47,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 EXPOSE 8888
 
+RUN apt-get install software-properties-common python-software-properties
 RUN apt-add-repository ppa:libccd-debs/ppa
 RUN apt-add-repository ppa:fcl-debs/ppa
 RUN apt-add-repository ppa:dartsim/ppa

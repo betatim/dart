@@ -47,7 +47,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 EXPOSE 8888
 
-RUN add-apt-repository ppa:dartsim/ppa
+RUN apt-add-repository ppa:dartsim/ppa
 RUN apt-get update
 RUN apt-get install libdart6-all-dev
 

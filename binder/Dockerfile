@@ -47,7 +47,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 EXPOSE 8888
 
-RUN apt-get install software-properties-common python-software-properties
 RUN add-apt-repository ppa:dartsim/ppa
 RUN apt-get update
 RUN apt-get install libdart6-all-dev

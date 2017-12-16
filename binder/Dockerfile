@@ -1,4 +1,4 @@
-FROM buildpack-deps:zesty
+FROM buildpack-deps:xenial
 
 # Set up locales properly
 RUN apt-get update && \
@@ -48,9 +48,7 @@ RUN apt-get update && \
 EXPOSE 8888
 
 RUN apt-get install software-properties-common python-software-properties
-RUN apt-add-repository ppa:libccd-debs/ppa
-RUN apt-add-repository ppa:fcl-debs/ppa
-RUN apt-add-repository ppa:dartsim/ppa
+RUN add-apt-repository ppa:dartsim/ppa
 RUN apt-get update
 RUN apt-get install libdart6-all-dev
 

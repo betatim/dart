@@ -49,7 +49,7 @@ EXPOSE 8888
 
 RUN apt-add-repository ppa:dartsim/ppa
 RUN apt-get update
-RUN apt-get install libdart6-all-dev
+RUN apt-get install --yes libdart6-all-dev
 
 
 # Almost all environment variables

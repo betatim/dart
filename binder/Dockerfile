@@ -2,7 +2,7 @@ FROM buildpack-deps:xenial
 
 # Set up locales properly
 RUN apt-get update && \
-    apt-get install --yes --no-install-recommends locales && \
+    apt-get install --yes --no-install-recommends locales software-properties-common && \
     apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
